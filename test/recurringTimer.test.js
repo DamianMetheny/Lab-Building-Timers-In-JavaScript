@@ -1,11 +1,11 @@
-const { recurringTimer, stopRecurringTimer } = require('../src/recurringTimer')
+const  { recurringTimer, stopRecurringTimer } = require('../src/recurringTimer')
 
 jest.useFakeTimers()
 
 describe('recurringTimer', () => {
   test('should log the message at the specified interval', () => {
     console.log = jest.fn() // Mock console.log
-
+    
     const message = 'Recurring message'
     const interval = 2000 // 2 seconds
     const timerId = recurringTimer(message, interval)
